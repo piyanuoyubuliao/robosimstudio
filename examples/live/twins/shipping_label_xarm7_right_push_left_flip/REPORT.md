@@ -2,8 +2,37 @@
 
 This twin uses the shared-pillar dual xArm7 cell from `shipping_label_xarm7`.
 The right arm pushes the parcel toward the left hand; the left hand lifts,
-flips and lowers it, then pushes it onto the stationary conveyor. The parcel
+flips and lowers it, then pushes it onto the receiving conveyor. The parcel
 starts on the desktop. Upstream feeding is not automated.
+
+## Receiving conveyor drive
+
+The receiving belt now runs toward world -x (the robot's left), at an assumed
+0.08 m/s. `conveyor.py` preserves the original belt dimensions and friction
+0.65. After collision detection it assigns the top belt's soft-contact
+surface velocity; VBD computes the parcel's friction response. It never
+writes parcel poses or velocities during transport. This implementation is
+specific to this twin's one-way rigid/cloth coupling and deformable parcel;
+it does not implement conveyor traction for unrelated rigid cargo.
+
+Twelve thin, non-colliding paint marks circulate at the same speed, making
+the surface direction visible in the browser and recordings. These are a
+visual aid, not reference-calibrated belt markings. The roller drive and
+return run are not mechanically simulated. `Conveyor left` starts the belt
+and resumes physics, while `Conveyor stop` sets its speed to zero. Whole-scene
+Pause also pauses belt motion; Ready retains its reset-and-pause behavior.
+
+`run/conveyor_validation.json` records an isolated two-second stopped/running
+comparison, with the parcel placed on the belt only at the start of each
+probe. Stopped x drift was -0.029 mm. Running displacement was -159.398 mm,
+mean speed -0.079699 m/s, and stripe displacement was -159.988 mm. Both states
+remained finite, with 1,433 belt contacts at the final reading. The original
+task was reset after the probes and the conveyor left running.
+`run/snap_023.png` and `run/snap_024.png` show the unchanged camera and belt
+markings before and after 0.5 seconds (40 mm leftward surface travel), using
+the page's GL renderer. Ruff lint and format checks pass for the conveyor
+helper and probe. The earlier full routine/physics recordings below used a
+stationary belt; the entire flip routine was not replayed for this change.
 
 ## Final motion and result
 

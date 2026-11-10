@@ -102,8 +102,14 @@ teaching are retained. The existing textures are ready to use; regenerating
 them with `prepare_assets.py` requires the original
 `ref/first_cycle/t015.00.jpg`, which was already absent from this folder.
 
-The receiving belt is stationary. The task starts with one parcel already
-at the work area; upstream feeding is not automated.
+The receiving belt runs left (world -x) at 0.08 m/s whenever simulation is
+stepping. Its circulating green stripes show the surface direction. The
+**Conveyor left** button starts the belt and resumes simulation;
+**Conveyor stop** stops the belt without pausing the robot. **Ready** still
+resets and pauses the whole scene. `BELT_SPEED` in `conveyor.py` sets the
+signed surface speed. The belt carries the deformable parcel through contact
+friction. The task starts with one parcel already at the work area; upstream
+feeding is not automated.
 
 ## Teaching replacement motion
 

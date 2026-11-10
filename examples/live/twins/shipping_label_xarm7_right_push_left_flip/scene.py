@@ -2,6 +2,7 @@ import json
 from dataclasses import replace
 from pathlib import Path
 
+from conveyor import start_conveyor, stop_conveyor
 from label_appearance import MAILER_CELLS, install
 from live_controls import install as install_controls
 from live_controls import ready
@@ -61,6 +62,7 @@ fixed(
     color=(0.025, 0.22, 0.14),
     finish=Finish(roughness=0.8),
     friction=0.65,
+    entity="shipping_receiving_conveyor",
 )
 for y in (-0.28, 0.58):
     fixed(f"conveyor_side_{y}", (0.63, 0.025, 0.055), (-1, y, 0.705))
@@ -155,4 +157,4 @@ scene.add(
         name="manipulation", width=1280, height=850, eye=(-1.15, 1.0, 1.75), look_at=(-0.08, 0.0, 1.0), fov_y=55
     )
 )
-routines = {"Ready": ready, "routine": routine}
+routines = {"Ready": ready, "routine": routine, "Conveyor left": start_conveyor, "Conveyor stop": stop_conveyor}
