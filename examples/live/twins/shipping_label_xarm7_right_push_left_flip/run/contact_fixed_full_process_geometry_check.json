@@ -1,0 +1,153 @@
+{
+  "tolerance_mm": 0.05,
+  "phases": {
+    "left_lower_corner": {
+      "samples": 26,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_clamp_corner": {
+      "samples": 36,
+      "intersecting_samples": 10,
+      "max_intersecting_triangles": 1,
+      "max_depth_mm": 0.35135499514935875,
+      "first_intersection_time": 32.64999999999943,
+      "last_intersection_time": 33.099999999999405
+    },
+    "left_flip_rise": {
+      "samples": 98,
+      "intersecting_samples": 10,
+      "max_intersecting_triangles": 1,
+      "max_depth_mm": 0.3642089996817959,
+      "first_intersection_time": 33.1499999999994,
+      "last_intersection_time": 33.599999999999376
+    },
+    "left_flip_extra_lift": {
+      "samples": 31,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_flip_lift_hold": {
+      "samples": 17,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_flip_rotate": {
+      "samples": 181,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_flip_rotate_press": {
+      "samples": 30,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_flip_contact_hold": {
+      "samples": 12,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_flip_drag": {
+      "samples": 117,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_release_face_up": {
+      "samples": 25,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_depart": {
+      "samples": 31,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "parcel_settle": {
+      "samples": 41,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_approach_belt_push": {
+      "samples": 35,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_contact_belt_edge": {
+      "samples": 25,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_belt_push_01": {
+      "samples": 10,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_belt_push_02": {
+      "samples": 10,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_belt_push_03": {
+      "samples": 10,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_belt_push_04": {
+      "samples": 10,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_belt_push_05": {
+      "samples": 10,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_belt_push_06": {
+      "samples": 10,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_belt_push_07": {
+      "samples": 10,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_belt_push_08": {
+      "samples": 10,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "left_belt_retract": {
+      "samples": 29,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    },
+    "belt_settle": {
+      "samples": 21,
+      "intersecting_samples": 0,
+      "max_intersecting_triangles": 0,
+      "max_depth_mm": 0.0
+    }
+  }
+}

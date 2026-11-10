@@ -1,0 +1,160 @@
+{
+  "teaching": {
+    "file": "assets/teaching/20261110T035457_916925Z.json",
+    "sha256": "87e61334863821ebb9d732b0f0e0bd215f4fca7a54f4be908bb54445bf61b903",
+    "created_at": "2026-11-10T03:54:57.916925+00:00",
+    "interpolation": "smoothstep_joint",
+    "flip_clearance_m": 0.05,
+    "pinch_closure": 0.95,
+    "max_joint_speed_rad_s": 0.35,
+    "max_tcp_speed_m_s": 0.06,
+    "max_tcp_angular_speed_rad_s": 0.3
+  },
+  "phases": [
+    {
+      "phase": "left_teaching_entry",
+      "seconds": 8.333333333333334,
+      "peak_joint_speed_rad_s": 0.12893183109061512,
+      "peak_tcp_speed_m_s": 0.059995438805284025,
+      "peak_tcp_angular_speed_rad_s": 0.02403399675621615,
+      "within_joint_limits": true
+    },
+    {
+      "phase": "left_approach_corner",
+      "seconds": 7.5,
+      "peak_joint_speed_rad_s": 0.23976351204680002,
+      "peak_tcp_speed_m_s": 0.024826202108094466,
+      "peak_tcp_angular_speed_rad_s": 0.29955681655506916,
+      "within_joint_limits": true
+    },
+    {
+      "phase": "left_lower_corner",
+      "seconds": 6.466666666666667,
+      "peak_joint_speed_rad_s": 0.10350292119810867,
+      "peak_tcp_speed_m_s": 0.05985183123081818,
+      "peak_tcp_angular_speed_rad_s": 0.009857497388685734,
+      "within_joint_limits": true
+    },
+    {
+      "phase": "left_clamp_corner",
+      "seconds": 1.8,
+      "peak_joint_speed_rad_s": 0.0,
+      "peak_tcp_speed_m_s": 0.0,
+      "peak_tcp_angular_speed_rad_s": 0.0,
+      "within_joint_limits": true,
+      "keyframe": "抓取点",
+      "tcp_offset_z": 0.0,
+      "tcp_error_m": 8.419728824266554e-07,
+      "rotation_error_rad": 2.3227656763597169e-07
+    },
+    {
+      "phase": "left_flip_rise",
+      "seconds": 4.866666666666666,
+      "peak_joint_speed_rad_s": 0.09818509794460084,
+      "peak_tcp_speed_m_s": 0.05992720706819547,
+      "peak_tcp_angular_speed_rad_s": 0.006370756455474845,
+      "within_joint_limits": true,
+      "keyframe": "提起点",
+      "tcp_offset_z": 0.0,
+      "tcp_error_m": 7.253613549944112e-07,
+      "rotation_error_rad": 8.936894109391386e-08
+    },
+    {
+      "phase": "left_flip_extra_lift",
+      "seconds": 1.5,
+      "peak_joint_speed_rad_s": 0.09597567091133907,
+      "peak_tcp_speed_m_s": 0.050022828695800124,
+      "peak_tcp_angular_speed_rad_s": 0.0026139346206292503,
+      "within_joint_limits": true,
+      "keyframe": "提起点",
+      "tcp_offset_z": 0.05,
+      "tcp_error_m": 3.586017805861512e-08,
+      "rotation_error_rad": 1.322930386387318e-06
+    },
+    {
+      "phase": "left_flip_lift_hold",
+      "seconds": 0.8,
+      "peak_joint_speed_rad_s": 0.0,
+      "peak_tcp_speed_m_s": 0.0,
+      "peak_tcp_angular_speed_rad_s": 0.0,
+      "within_joint_limits": true
+    },
+    {
+      "phase": "left_flip_rotate",
+      "seconds": 9.033333333333333,
+      "peak_joint_speed_rad_s": 0.13058394091438164,
+      "peak_tcp_speed_m_s": 0.051784564235056736,
+      "peak_tcp_angular_speed_rad_s": 0.29947972323634137,
+      "within_joint_limits": true,
+      "keyframe": "旋转后下压",
+      "tcp_offset_z": 0.05,
+      "tcp_error_m": 9.568075834587389e-08,
+      "rotation_error_rad": 2.524133027352747e-06
+    },
+    {
+      "phase": "left_flip_rotate_press",
+      "seconds": 1.5,
+      "peak_joint_speed_rad_s": 0.16288559326050667,
+      "peak_tcp_speed_m_s": 0.050033993347563435,
+      "peak_tcp_angular_speed_rad_s": 0.0009346165343798798,
+      "within_joint_limits": true,
+      "keyframe": "旋转后下压",
+      "tcp_offset_z": 0.0,
+      "tcp_error_m": 7.829834245118948e-07,
+      "rotation_error_rad": 2.832083182384181e-07
+    },
+    {
+      "phase": "left_flip_contact_hold",
+      "seconds": 0.6,
+      "peak_joint_speed_rad_s": 0.0,
+      "peak_tcp_speed_m_s": 0.0,
+      "peak_tcp_angular_speed_rad_s": 0.0,
+      "within_joint_limits": true
+    },
+    {
+      "phase": "left_flip_drag",
+      "seconds": 5.833333333333333,
+      "peak_joint_speed_rad_s": 0.14849421112127725,
+      "peak_tcp_speed_m_s": 0.04757176194908003,
+      "peak_tcp_angular_speed_rad_s": 0.2999891174099011,
+      "within_joint_limits": true,
+      "keyframe": "拖拽",
+      "tcp_offset_z": 0.0,
+      "tcp_error_m": 6.291099859737451e-07,
+      "rotation_error_rad": 1.7023298594988415e-07
+    },
+    {
+      "phase": "left_release_face_up",
+      "seconds": 1.2,
+      "peak_joint_speed_rad_s": 0.0001211152814439842,
+      "peak_tcp_speed_m_s": 4.0005270865710674e-05,
+      "peak_tcp_angular_speed_rad_s": 0.00010396105595659255,
+      "within_joint_limits": true,
+      "keyframe": "开爪",
+      "tcp_offset_z": 0.0,
+      "tcp_error_m": 7.71445333826134e-07,
+      "rotation_error_rad": 8.929362253260976e-08
+    },
+    {
+      "phase": "left_depart",
+      "seconds": 1.5,
+      "peak_joint_speed_rad_s": 0.10244089628934638,
+      "peak_tcp_speed_m_s": 0.04386507824866595,
+      "peak_tcp_angular_speed_rad_s": 0.0029545826772670817,
+      "within_joint_limits": true,
+      "keyframe": "离开",
+      "tcp_offset_z": 0.0,
+      "tcp_error_m": 8.175200948820033e-07,
+      "rotation_error_rad": 1.1134281358976496e-07
+    },
+    {
+      "phase": "parcel_settle",
+      "seconds": 2.0,
+      "peak_joint_speed_rad_s": 0.0,
+      "peak_tcp_speed_m_s": 0.0,
+      "peak_tcp_angular_speed_rad_s": 0.0,
+      "within_joint_limits": true
+    }
+  ],
+  "passed": true
+}

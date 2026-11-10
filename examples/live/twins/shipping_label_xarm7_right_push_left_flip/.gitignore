@@ -1,0 +1,10 @@
+!run/
+run/*
+!run/contact_fixed_full_process_video.mp4
+!run/contact_fixed_lift_rotate_closeup_slow.mp4
+!run/contact_fixed_full_process_video.json
+!run/contact_fixed_full_process_result.json
+!run/contact_fixed_full_process_physics.json
+!run/contact_fixed_full_process_summary.json
+!run/contact_fixed_full_process_geometry_check.json
+!run/taught_plan_validation.json
