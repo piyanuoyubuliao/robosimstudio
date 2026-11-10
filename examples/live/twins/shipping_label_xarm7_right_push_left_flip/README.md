@@ -40,9 +40,14 @@ Useful commands from this folder:
 vendor arms and parcel texture atlas; `plan_motion.py` generates reachable
 joint waypoints, using `taught_motion.py` for the demonstrated flip.
 `motion.py` controls robot joints and measures the two
-physical parcel faces. `label_appearance.py` maps the printed face onto the
-existing deformable mesh for RTX rendering; it changes no collision or
-simulation state. `ref/` retains the supplied motion reference stills.
+physical parcel faces. `label_appearance.py` maps `assets/mailer_faces.png`
+onto the existing deformable mesh in the browser, GL recordings and RTX.
+The front carries the reference shipping label; the back and rim carry only
+the plastic surface texture. The mapping follows the particles through the
+flip, without adding a separate label mesh or changing collision or
+simulation state. Ready still starts label-down, so the label becomes visible
+after the left arm flips the parcel. `ref/` retains the supplied motion
+reference stills.
 
 The routine has 39 phases and lasts approximately 71 simulated seconds.
 The flip uses the achieved joint positions and TCP orientations from

@@ -101,6 +101,41 @@ The retained videos use GL rendering. The room, lighting and cameras were
 not newly calibrated against the reference, and no path-traced appearance
 match, statistical repeatability or real-hardware force margin is claimed.
 
+## Parcel surface texture
+
+The existing `assets/mailer_faces.png` atlas now appears on the browser's
+deforming parcel mesh and in GL snapshots and recordings, as well as RTX.
+The printed atlas half is assigned to the 384 triangles of the front face;
+the 384 back-face triangles and 112 rim triangles use the unprinted half.
+The browser draws the parcel's actual slab surface without cloth pile.
+The UV coordinates are fixed to particle indices, so the texture follows
+deformation and does not change faces when the parcel flips. Ready retains
+the original label-down placement.
+
+`run/mailer_front_gl.png` and `run/mailer_back_gl.png` show the two faces
+of the reset parcel with other geometry hidden only in a separate preview
+renderer. The front shows the shipping label; the back shows the plastic
+grain, creases and border. `run/mailer_surface.glb` is the textured surface
+export used by the browser. `run/texture_validation.json` records the face
+counts, all 2,640 GL texture coordinates, successful GLB encoding, and exact
+equality of simulation particle positions before and after verification.
+No browser client was connected during verification, so this checks the
+browser mesh export rather than a browser screenshot.
+
+`run/mailer_scene_gl.png` and `run/mailer_scene_rtx.png` show the complete
+reset scene through the unchanged manipulation camera. Both display the
+textured unprinted face on top, consistent with the label-down start.
+The live scene rebuilt successfully and is left paused. Ruff lint and
+format checks pass for `label_appearance.py` and the verification script;
+`scene.py` still has its pre-existing unused `install_controls` import.
+
+The surface and label reuse the existing assets. The plastic creases are
+procedural colour detail rather than measured relief, and the label remains
+the low-resolution crop from the supplied reference. No new dimensions,
+material parameters, camera calibration or motion changes were introduced.
+The previous physics evidence and limitations still apply; the full motion
+and physics counterfactuals were not rerun for this appearance change.
+
 ## Retained files
 
 The scene, motion generation, teaching controls, robot model and provenance,

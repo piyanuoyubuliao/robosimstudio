@@ -2,7 +2,7 @@ import json
 from dataclasses import replace
 from pathlib import Path
 
-from label_appearance import install
+from label_appearance import MAILER_CELLS, install
 from live_controls import install as install_controls
 from live_controls import ready
 from motion import routine
@@ -115,7 +115,7 @@ scene.add(
     rss.sheet(
         name="shipping_mailer",
         size=MAILER_SIZE,
-        cells=(12, 16),
+        cells=MAILER_CELLS,
         at=(-0.04, 0.26, 0.803),
         quat=(1, 0, 0, 0),
         material=material,
