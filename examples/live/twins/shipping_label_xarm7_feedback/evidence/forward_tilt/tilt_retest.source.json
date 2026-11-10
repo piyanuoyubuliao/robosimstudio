@@ -1,0 +1,116 @@
+{
+  "config": {
+    "size": [
+      0.24,
+      0.32
+    ],
+    "cells": [
+      12,
+      16
+    ],
+    "thickness": 0.03,
+    "table_z": 0.78,
+    "max_retries": 2,
+    "max_transfer_strokes": 12,
+    "max_belt_strokes": 24,
+    "max_nodes": 160,
+    "push_approach_z": 1.0,
+    "right_push_tilts": [
+      0.0,
+      5.0,
+      10.0,
+      15.0,
+      20.0
+    ],
+    "push_step": 0.045,
+    "minimum_push": 0.003,
+    "left_center_x": [
+      -0.12,
+      0.015
+    ],
+    "left_center_y": [
+      0.04,
+      0.19
+    ],
+    "input_center_x": [
+      -0.12,
+      0.18
+    ],
+    "input_center_y": [
+      0.01,
+      0.25
+    ],
+    "face_threshold": 0.8,
+    "flat_residual": 0.018,
+    "max_strain": 0.22,
+    "max_normal_disagreement": 0.15,
+    "grasp_inset": 0.025,
+    "grasp_height_offset": 0.0,
+    "pinch": 0.95,
+    "lift_minimum": 0.045,
+    "slip_distance": 0.035,
+    "flip_clearance": 0.05,
+    "collision_margin": 0.002,
+    "max_joint_speed": 0.35,
+    "max_tcp_speed": 0.06,
+    "max_angular_speed": 0.3,
+    "belt_coverage": 0.98,
+    "stable_seconds": 0.6,
+    "stable_speed": 0.015
+  },
+  "cases": [
+    {
+      "name": "yaw_15_back",
+      "center": [
+        0.09662908258908082,
+        0.125042168629631
+      ],
+      "yaw": 15.0,
+      "face_up": false
+    },
+    {
+      "name": "yaw_-15_front",
+      "center": [
+        0.09101891881269276,
+        0.11721747141933668
+      ],
+      "yaw": -15.0,
+      "face_up": true
+    },
+    {
+      "name": "reference_back",
+      "center": [
+        0.08,
+        0.1
+      ],
+      "yaw": 0.0,
+      "face_up": false
+    },
+    {
+      "name": "reference_front",
+      "center": [
+        0.08,
+        0.1
+      ],
+      "yaw": 0.0,
+      "face_up": true
+    }
+  ],
+  "sha256": {
+    "semantic_checks.py": "7a4235f02f7cffef886aeb47c6a5d40ef7848447fa04ecd01b970d2d9f458366",
+    "planning.py": "cc7a596ef85dcd826d7d653d0fbfd2f458134fe1afd068f8553e592ffd8056bc",
+    "policy.py": "2cf3806aadb481de26d347e9111d663be9edc3b4fb924606f3b79f14ee0de0ef",
+    "config.py": "454baa6362ef09ed6724e3f09150200066034ddd41304a2371bbc1dd4ca29a72",
+    "observation.py": "f49c0f3faf740d205d103b0cd67dbaf446b06c5145f8f40a76591e8dd388830e",
+    "scene.py": "2d3b22bf04d6b0b334d93620c0815375bd9443a125964eb773543a92b5a498ab",
+    "keyframes.py": "51e1fff89a04d89c34a61d7b055b6f5b2a18ac80b4f25fe50d9ff8f776472ac8",
+    "robot_setup.py": "89cb5d2a7ec6b192f69de90b4276811366944201c46b915840c4543853e237d0",
+    "report_results.py": "d7bbb5ff27d8fe01c4710264d108145e7d5996518df1542b4375997fc0b18802",
+    "validation.py": "faaa01920c05b268f38efda651d71ccbb5eccc9c28f23db9c623553b3844d4d3",
+    "label_appearance.py": "e8c94b15313cc262e39bf445c21504220d8fd311db3fb81e385e73b3043fd244",
+    "cell.py": "9f4cb8a3179e17800f5937064cc9071bfbaef64ce0cce1b147dbae41f9d82ede",
+    "control.py": "06c153940f1da1f457a42cacc623d49767f262b328fee99f4153a8fed8c74f9d",
+    "audit.py": "92b1c0622fc9c16e6be3e70dc3ee5dc0f7a0283984583ea54261f19ca052fda6",
+    "graph/workflow.json": "fbd9a3ac7761259c94d1234bb5b548c84e0289a8c5e1b39e0976aeba516c3a41"
+  }
+}

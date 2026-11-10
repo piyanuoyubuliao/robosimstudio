@@ -1,0 +1,56 @@
+[
+  {
+    "case": "yaw_15_back",
+    "tilt_degrees": 0,
+    "pass": false,
+    "phase": "push",
+    "detail": "unreachable: right: [0.13068142638731917, 0.13034104160295054, 0.8199970462694472], residual=[0.008634790124665281, -0.012641227935402122, 0.0012190903394371233, -0.030483479655091045, 0.02107275898422278, -1.0358674552321104e-07]"
+  },
+  {
+    "case": "yaw_15_back",
+    "tilt_degrees": 5,
+    "pass": true
+  },
+  {
+    "case": "yaw_15_back",
+    "tilt_degrees": 10,
+    "pass": true
+  },
+  {
+    "case": "yaw_15_back",
+    "tilt_degrees": 15,
+    "pass": true
+  },
+  {
+    "case": "yaw_15_back",
+    "tilt_degrees": 20,
+    "pass": true
+  },
+  {
+    "case": "yaw_-15_front",
+    "tilt_degrees": 0,
+    "pass": false,
+    "phase": "push",
+    "detail": "unreachable: right: [0.10315045606143615, 0.11546974425390841, 0.8199970739405619], residual=[0.012803286497261451, -0.016972874223051826, 0.0017373364072081898, -0.04057386793982261, 0.03103100346708552, -1.1089739229417736e-07]"
+  },
+  {
+    "case": "yaw_-15_front",
+    "tilt_degrees": 5,
+    "pass": true
+  },
+  {
+    "case": "yaw_-15_front",
+    "tilt_degrees": 10,
+    "pass": true
+  },
+  {
+    "case": "yaw_-15_front",
+    "tilt_degrees": 15,
+    "pass": true
+  },
+  {
+    "case": "yaw_-15_front",
+    "tilt_degrees": 20,
+    "pass": true
+  }
+]

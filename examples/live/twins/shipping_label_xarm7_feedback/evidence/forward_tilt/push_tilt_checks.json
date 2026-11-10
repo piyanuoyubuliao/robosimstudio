@@ -1,0 +1,10 @@
+{
+  "kind": "real_kinematic_paths_and_failure_contracts_no_contact_physics",
+  "passed": 4,
+  "checks": [
+    "yaw_15_back_five_degree_fallback_without_mutation",
+    "yaw_-15_front_five_degree_fallback_without_mutation",
+    "all_candidates_blocked_refuses",
+    "invalid_tilt_candidates_rejected"
+  ]
+}

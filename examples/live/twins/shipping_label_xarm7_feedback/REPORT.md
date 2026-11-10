@@ -1,6 +1,6 @@
 # 双臂 xArm7 状态反馈分拣 Policy 验证报告
 
-本版面向同尺寸、单件、平放包裹。策略已从固定关节示教改为 GaP 分阶段状态反馈；
+本版面向同尺寸、单件、平放包裹。最新右臂前倾修正及 4/4 回归结果见文末。策略已从固定关节示教改为 GaP 分阶段状态反馈；
 物理结果按完整入带和各阶段分别统计，见下文回合表。随机三件、堆叠执行、侧立和严重折叠不属于本版范围。
 
 ## 方法与判定
@@ -37,7 +37,7 @@
   这些数字不包含接触动力学，不能算分拣成功率。
 - 本目录 Ruff lint 和 format 检查通过。
 
-## 物理回合
+## 原版物理回合（前倾修正前）
 
 正式证据在 `evidence/summary.json`、`evidence/acceptance.json`、
 `evidence/acceptance_boundary.json`、`evidence/acceptance_retest.json` 和对应的
@@ -94,7 +94,7 @@
 旋转泛化的成功证据包括 −15°/−30°/+30° 背面、左边界 −10° 背面，以及 +15° 正面的离散位姿；
 对应 xy、失败位姿和完整统计见 `evidence/summary.json`。
 这支持相对包裹姿态规划的可行性，不能证明上述角度之间或整个候选工作区都能成功。
-尤其 y=0.117/0.125 m 附近的两个样本在右臂低位推送时不可达，恢复两次后终止。
+原版 y=0.117/0.125 m 附近的两个样本在右臂低位推送时不可达；前倾修正后均完整成功，见文末复测。
 实际有效空间受包裹边界、夹爪姿态、IK 连续性和双臂/环境间距共同约束。
 
 所有成功都发生在同尺寸、轻度形变、平放单件包裹上。没有物理验证严重形变后的恢复，
@@ -142,3 +142,63 @@ PASS grip no finger force on a rigid thing (a deformable's is not read)
 
 `top_first()` 通过高度及平面包围盒重叠保守筛出未被上层覆盖的包裹。
 本版遇到多件返回候选顺序并拒绝执行；这不是三件或堆叠分拣已实现的声明。
+
+## 2026-11-11：右臂前倾修正
+
+原表中 `yaw_15_back` 和 `yaw_-15_front` 的失败发生在右臂第二段低位推送，
+固定垂直向下的姿态把腕部推到了可达边界。右臂现在先检查完整路径，再依次尝试
+0°、5°、10°、…、45°，选择第一个可行姿态。绕世界 +x 的正向旋转使指尖朝 +y
+探出，在保持 TCP 接触点的同时让腕部靠近机械臂。5° 对 155 mm 的 TCP 偏置
+约减少 13.5 mm 的腕部前伸距离。
+
+预检覆盖接近、闭爪、低位推送和撤离，保留关节限位、IK 连续性与桌面/双臂间距约束。
+每段重新观测并选角，`right_push_plans` 记录所选角度及被拒绝的候选。
+本次没有修改物体尺寸、摩擦、机器人增益、指尖碰撞体或成功阈值。
+
+两个原失败样本使用与原记录完全相同的初始 xy、yaw 和正反面重新构建，均在第二段
+选中 5° 并完成稳定入带，恢复次数为 0。最终覆盖率均为 100%，法向 z 接近 +1。
+对应最终图像为 `evidence/forward_tilt/yaw_15_back/final.png` 与
+`evidence/forward_tilt/yaw_-15_front/final.png`。
+
+| 本次回合 | 右臂各段前倾角 | 模拟时长（s） | 结果 |
+| --- | --- | ---: | --- |
+| yaw_15_back | 0°、5° | 96.117 | 稳定入带，0 次恢复 |
+| yaw_-15_front | 0°、5° | 65.367 | 稳定入带，0 次恢复 |
+| reference_back | 0° | 81.200 | 稳定入带，0 次恢复 |
+| reference_front | 0° | 53.533 | 稳定入带，0 次恢复 |
+
+本次 4/4 完整成功，包含两个原失败样本与正反面基准，全部 0 次恢复。
+
+完整记录和源码快照分别归档在 `evidence/forward_tilt/tilt_retest.json`、
+`tilt_retest.source.json` 和 `source/`，摘要为同目录 `summary.json`。
+旧版 7/9 统计和失败行保留为历史记录，不与修正版混合计算成功率。
+本次仅验证离散样本，不构成连续工作区保证。
+
+运行到基准回归期间，用户将候选上限从 20° 扩展至 45°；随后按用户确认同步放宽配置校验。
+当时默认校验暂时拒绝 25° 以上值，页面重载失败并继续使用原场景；回合未 Reset、未被替换。
+回归及接触对照始终使用启动时的 0–20° 配置，归档源码 SHA-256 与启动清单逐项匹配。
+最终 0–45° 配置另做路径选择/拒绝检查，两个失败位置仍选中 5°。
+25–45° 是可尝试的规划候选，尚无这些角度下的完整接触动力学成功证据。
+
+`push_tilt_probe.json` 保存两个历史失败位置的 0/5/10/15/20° 路径扫描；
+`push_tilt_checks.json` 和 `push_tilt_checks_45.json` 分别记录两个配置范围的
+真实运动学路径、选择 5°、状态不被预检修改、所有候选受阻时拒绝及配置边界检查。
+原有 9 项 Policy 失败分支检查、改动文件的 Ruff lint/format 均通过。
+
+本次重新执行 `./ctl physics "Contact audit" --only frozen,open,built`，结果在
+`evidence/forward_tilt/physics.json`，工具原文：
+
+```text
+PASS  contact  nothing ties a thing to the robot, no motor on a thing's joints, nothing welded
+NOTE  robot    dual_xarm7_shared_pillar is built from /home/CNS2026004449/Documents/robosimstudio/examples/live/twins/shipping_label_xarm7_feedback/assets/dual_xarm7.xml, which the library does not ship: its servo gains and limits are the file's own and are not checked
+PASS  model    gravity 9.81 m/s²; the handled things' densities are ones objects have
+PASS  written  finished; moved shipping_mailer
+PASS  frozen   with the robot frozen nothing moved more than 2.0 mm
+PASS  open     with the fingers held open the task did not happen (RuntimeError: Policy did not complete: empty_grasp)
+PASS  built    finished with every friction at most 1 (no torque limits known for this robot), the things ending where the written run left them
+PASS  grip     no finger force on a rigid thing (a deformable's is not read)
+```
+
+对照为 yaw=0° 背面基准；各模式与位姿矩阵分开统计。冻结时约 2 mm 的沉降、
+未知实机力矩与无法读取软包裹指尖力的限制仍然适用。最终 45° 配置与源码清单为
+`config_final.py` 和 `final_source.json`；25–45° 未作完整物理回合。

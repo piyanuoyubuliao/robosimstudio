@@ -11,6 +11,7 @@ from config import DEFAULT
 from control import RobotControl
 from observation import ObservationError, ParticleObserver, top_first
 from planning import DOWN, FlipTemplate, Refusal, push_contact
+from scipy.spatial.transform import Rotation
 
 ROOT = Path(__file__).resolve().parent
 
@@ -152,6 +153,40 @@ class FeedbackPolicy:
             self.result["handoff_preview"] = str(error)
             return False
 
+    def transfer_orientation(self, above, contact, target):
+        """Choose the smallest forward tilt with a clear complete push path."""
+        attempts = []
+        retreat = target.copy()
+        retreat[0] = max(retreat[0], 0.25)
+        retreat[2] = max(retreat[2], 1.09)
+        for degrees in self.config.right_push_tilts:
+            # World +x rotation tips the downward fingers toward +y, bringing
+            # the wrist back toward the arm while keeping the contact fixed.
+            rotation = Rotation.from_euler("x", degrees, degrees=True) * DOWN
+            joints = {side: values.copy() for side, values in self.robot.joints.items()}
+            grip = self.robot.grip.copy()
+            try:
+                for index, point in enumerate((above, contact, target, retreat)):
+                    if index == 1:
+                        for closure in np.linspace(grip["right"], 1.0, max(2, round(0.8 * self.robot.hz))):
+                            grip["right"] = closure
+                            self.robot.planner.check(joints, grip)
+                    values = self.robot.planner.path("right", point, rotation, joints, grip, self.robot.hz)
+                    joints["right"] = values[-1]
+            except Refusal as error:
+                if error.reason not in {"unreachable", "ik_discontinuity", "collision"}:
+                    raise
+                attempts.append({"tilt_degrees": degrees, "failure": error.reason, "detail": str(error)})
+                continue
+            self.result.setdefault("right_push_plans", []).append(
+                {"contact": contact.tolist(), "tilt_degrees": degrees, "rejected": attempts}
+            )
+            return rotation
+        self.result.setdefault("right_push_plans", []).append(
+            {"contact": contact.tolist(), "tilt_degrees": None, "rejected": attempts}
+        )
+        raise Refusal(attempts[-1]["failure"], f"right push: no feasible tilt; {attempts}")
+
     def push(self, side, stage):
         observation = self.read()
         failure = observation.flat_failure(self.config)
@@ -165,6 +200,9 @@ class FeedbackPolicy:
         contact = push_contact(observation)
         above = contact.copy()
         above[2] = self.config.push_approach_z
+        target = contact.copy()
+        target[0] -= self.config.push_step + 0.035
+        rotation = DOWN
         current, _ = self.robot.pose(side)
         continuing = (
             getattr(self, "push_active", None) == side
@@ -173,12 +211,12 @@ class FeedbackPolicy:
         )
         if not continuing:
             yield from self.robot.retreat(side)
-            yield from self.robot.move(side, above, DOWN)
+            if side == "right":
+                rotation = self.transfer_orientation(above, contact, target)
+            yield from self.robot.move(side, above, rotation)
             yield from self.robot.set_grip(side, 1.0)
-            yield from self.robot.move(side, contact, DOWN)
-        target = contact.copy()
-        target[0] -= self.config.push_step + 0.035
-        yield from self.robot.move(side, target, DOWN)
+            yield from self.robot.move(side, contact, rotation)
+        yield from self.robot.move(side, target, rotation)
         self.push_active = side if stage == "belt" else None
         if stage != "belt":
             yield from self.robot.retreat(side)

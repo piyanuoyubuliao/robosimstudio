@@ -12,6 +12,7 @@ class Config:
     max_belt_strokes: int = 24
     max_nodes: int = 160
     push_approach_z: float = 1.00
+    right_push_tilts: tuple = (0.0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0)
     push_step: float = 0.045
     minimum_push: float = 0.003
     left_center_x: tuple = (-0.12, 0.015)
@@ -39,6 +40,10 @@ class Config:
     def __post_init__(self):
         if self.max_retries < 0 or self.max_nodes < 1 or self.push_step <= 0:
             raise ValueError("Invalid policy budget")
+        if not self.right_push_tilts or any(not 0 <= angle <= 45 for angle in self.right_push_tilts):
+            raise ValueError("Right push tilts must be between 0 and 45 degrees")
+        if tuple(sorted(set(self.right_push_tilts))) != self.right_push_tilts:
+            raise ValueError("Right push tilts must increase without duplicates")
 
 
 DEFAULT = Config()
