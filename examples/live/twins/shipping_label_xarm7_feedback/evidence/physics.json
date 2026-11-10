@@ -1,0 +1,253 @@
+{
+ "passed": true,
+ "checks": [
+  {
+   "ok": true,
+   "name": "contact",
+   "detail": "nothing ties a thing to the robot, no motor on a thing's joints, nothing welded"
+  },
+  {
+   "ok": null,
+   "name": "robot",
+   "detail": "dual_xarm7_shared_pillar is built from /home/CNS2026004449/Documents/robosimstudio/examples/live/twins/shipping_label_xarm7_feedback/assets/dual_xarm7.xml, which the library does not ship: its servo gains and limits are the file's own and are not checked"
+  },
+  {
+   "ok": true,
+   "name": "model",
+   "detail": "gravity 9.81 m/s\u00b2; the handled things' densities are ones objects have"
+  },
+  {
+   "ok": true,
+   "name": "written",
+   "detail": "finished; moved shipping_mailer"
+  },
+  {
+   "ok": true,
+   "name": "frozen",
+   "detail": "with the robot frozen nothing moved more than 2.0 mm"
+  },
+  {
+   "ok": true,
+   "name": "open",
+   "detail": "with the fingers held open the task did not happen (RuntimeError: Policy did not complete: empty_grasp)"
+  },
+  {
+   "ok": true,
+   "name": "built",
+   "detail": "finished with every friction at most 1 (no torque limits known for this robot), the things ending where the written run left them"
+  },
+  {
+   "ok": true,
+   "name": "grip",
+   "detail": "no finger force on a rigid thing (a deformable's is not read)"
+  }
+ ],
+ "report": "PASS  contact  nothing ties a thing to the robot, no motor on a thing's joints, nothing welded\nNOTE  robot    dual_xarm7_shared_pillar is built from /home/CNS2026004449/Documents/robosimstudio/examples/live/twins/shipping_label_xarm7_feedback/assets/dual_xarm7.xml, which the library does not ship: its servo gains and limits are the file's own and are not checked\nPASS  model    gravity 9.81 m/s\u00b2; the handled things' densities are ones objects have\nPASS  written  finished; moved shipping_mailer\nPASS  frozen   with the robot frozen nothing moved more than 2.0 mm\nPASS  open     with the fingers held open the task did not happen (RuntimeError: Policy did not complete: empty_grasp)\nPASS  built    finished with every friction at most 1 (no torque limits known for this robot), the things ending where the written run left them\nPASS  grip     no finger force on a rigid thing (a deformable's is not read)",
+ "model": {
+  "robot": "dual_xarm7_shared_pillar",
+  "real_arm_torque": null,
+  "arm_torque": {
+   "left": null,
+   "right": null
+  },
+  "things": {},
+  "finger_mu": {
+   "left": [
+    0.6,
+    0.7,
+    1.0
+   ],
+   "right": [
+    0.6,
+    0.7,
+    1.0
+   ]
+  },
+  "hands": [
+   "robotiq_2f85",
+   "robotiq_2f85"
+  ],
+  "robot_spec": {
+   "name": "dual_xarm7_shared_pillar",
+   "registered": false,
+   "file": "/home/CNS2026004449/Documents/robosimstudio/examples/live/twins/shipping_label_xarm7_feedback/assets/dual_xarm7.xml"
+  },
+  "drawn_only_mm": {},
+  "robot_equalities": {},
+  "robot_equality_things": {},
+  "ties": [],
+  "tie_things": [],
+  "welds": [],
+  "drives": [],
+  "drive_things": [],
+  "drive_rows": [],
+  "kinematic": [],
+  "gravity": 9.81,
+  "elastic_parts": [],
+  "settle": {},
+  "settle_error": "the start overlap could not be read (ValueError: Contact capacities are frozen at (11200, 124224) by allocated solver observables; create a new model and solver observables to change capacities.)"
+ },
+ "runs": {
+  "written": {
+   "outcome": "finished",
+   "steps": 4872,
+   "log_error": "",
+   "held_rows": 0,
+   "cleanup_error": "",
+   "hooks_added": 0,
+   "step_hooks_added": 0,
+   "robot_equalities_on": [],
+   "suction_held": [],
+   "latched": [],
+   "thing_targets_moved": 0.0,
+   "contacts_unread": {},
+   "things": {},
+   "release_skip": 30,
+   "deformables": {
+    "shipping_mailer": {
+     "moved_max_mm": 644.2,
+     "end_mm": 644.2,
+     "end": [
+      -0.5633,
+      0.0648,
+      0.8025
+     ],
+     "particle_moved_max_mm": 884.8,
+     "particle_end_mm": 644.9
+    }
+   },
+   "jaw_mm": {
+    "left": [
+     0.0,
+     84.8
+    ],
+    "right": [
+     0.0,
+     1.4
+    ]
+   }
+  },
+  "frozen": {
+   "outcome": "RuntimeError: Policy did not complete: tracking_error",
+   "steps": 4872,
+   "log_error": "",
+   "held_rows": 42,
+   "cleanup_error": "",
+   "hooks_added": 0,
+   "step_hooks_added": 0,
+   "robot_equalities_on": [],
+   "suction_held": [],
+   "latched": [],
+   "thing_targets_moved": 0.0,
+   "contacts_unread": {},
+   "things": {},
+   "release_skip": 30,
+   "deformables": {
+    "shipping_mailer": {
+     "moved_max_mm": 2.0,
+     "end_mm": 2.0,
+     "end": [
+      0.0787,
+      0.1016,
+      0.8025
+     ],
+     "particle_moved_max_mm": 2.1,
+     "particle_end_mm": 2.0
+    }
+   },
+   "jaw_mm": {
+    "left": [
+     84.7,
+     84.8
+    ],
+    "right": [
+     81.1,
+     84.7
+    ]
+   }
+  },
+  "open": {
+   "outcome": "RuntimeError: Policy did not complete: empty_grasp",
+   "steps": 4872,
+   "log_error": "",
+   "held_rows": 4,
+   "cleanup_error": "",
+   "hooks_added": 0,
+   "step_hooks_added": 0,
+   "robot_equalities_on": [],
+   "suction_held": [],
+   "latched": [],
+   "thing_targets_moved": 0.0,
+   "contacts_unread": {},
+   "things": {},
+   "release_skip": 30,
+   "deformables": {
+    "shipping_mailer": {
+     "moved_max_mm": 67.0,
+     "end_mm": 66.5,
+     "end": [
+      0.0135,
+      0.1019,
+      0.8025
+     ],
+     "particle_moved_max_mm": 71.4,
+     "particle_end_mm": 66.5
+    }
+   },
+   "jaw_mm": {
+    "left": [
+     84.7,
+     84.8
+    ],
+    "right": [
+     81.1,
+     84.7
+    ]
+   }
+  },
+  "built": {
+   "outcome": "finished",
+   "steps": 4872,
+   "log_error": "",
+   "held_rows": 0,
+   "cleanup_error": "",
+   "hooks_added": 0,
+   "step_hooks_added": 0,
+   "robot_equalities_on": [],
+   "suction_held": [],
+   "latched": [],
+   "thing_targets_moved": 0.0,
+   "contacts_unread": {},
+   "things": {},
+   "release_skip": 30,
+   "deformables": {
+    "shipping_mailer": {
+     "moved_max_mm": 640.4,
+     "end_mm": 640.4,
+     "end": [
+      -0.559,
+      0.0564,
+      0.8025
+     ],
+     "particle_moved_max_mm": 881.1,
+     "particle_end_mm": 641.1
+    }
+   },
+   "jaw_mm": {
+    "left": [
+     0.0,
+     84.8
+    ],
+    "right": [
+     0.0,
+     1.4
+    ]
+   },
+   "lowered": {
+    "friction": 0,
+    "torque": 0,
+    "servo": 0
+   }
+  }
+ }
+}

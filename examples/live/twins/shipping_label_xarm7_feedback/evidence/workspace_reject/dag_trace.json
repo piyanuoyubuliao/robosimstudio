@@ -1,0 +1,1153 @@
+{
+  "nodes": [
+    {
+      "id": "n_0000",
+      "name": "observe",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 1794320586.009301,
+      "finished_at": 1794320586.0108163,
+      "duration_ms": 1.52,
+      "status": "ok",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": true,
+      "has_output": true,
+      "visits": 1,
+      "assets": []
+    },
+    {
+      "id": "n_0001",
+      "name": "transfer",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    },
+    {
+      "id": "n_0002",
+      "name": "verify_transfer",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    },
+    {
+      "id": "n_0003",
+      "name": "grasp",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    },
+    {
+      "id": "n_0004",
+      "name": "verify_lift",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    },
+    {
+      "id": "n_0005",
+      "name": "flip",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    },
+    {
+      "id": "n_0006",
+      "name": "verify_flip",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    },
+    {
+      "id": "n_0007",
+      "name": "belt",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    },
+    {
+      "id": "n_0008",
+      "name": "verify_belt",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    },
+    {
+      "id": "n_0009",
+      "name": "retry",
+      "node_type": "tool",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 1794320586.0113823,
+      "finished_at": 1794320586.0120215,
+      "duration_ms": 0.64,
+      "status": "ok",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": true,
+      "has_output": true,
+      "visits": 1,
+      "assets": []
+    },
+    {
+      "id": "n_0010",
+      "name": "done",
+      "node_type": "end",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    },
+    {
+      "id": "n_0011",
+      "name": "abort",
+      "node_type": "end",
+      "service": null,
+      "method": null,
+      "script": null,
+      "started_at": 0.0,
+      "finished_at": 0.0,
+      "duration_ms": 0.0,
+      "status": "pending",
+      "condition": null,
+      "condition_result": null,
+      "error_message": null,
+      "has_inputs": false,
+      "has_output": false,
+      "visits": 0,
+      "assets": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_0000",
+      "to": "n_0001",
+      "from_id": "n_0000",
+      "to_id": "n_0001",
+      "from_name": "observe",
+      "to_name": "transfer"
+    },
+    {
+      "from": "n_0000",
+      "to": "n_0003",
+      "from_id": "n_0000",
+      "to_id": "n_0003",
+      "from_name": "observe",
+      "to_name": "grasp"
+    },
+    {
+      "from": "n_0000",
+      "to": "n_0007",
+      "from_id": "n_0000",
+      "to_id": "n_0007",
+      "from_name": "observe",
+      "to_name": "belt"
+    },
+    {
+      "from": "n_0000",
+      "to": "n_0009",
+      "from_id": "n_0000",
+      "to_id": "n_0009",
+      "from_name": "observe",
+      "to_name": "retry"
+    },
+    {
+      "from": "n_0000",
+      "to": "n_0011",
+      "from_id": "n_0000",
+      "to_id": "n_0011",
+      "from_name": "observe",
+      "to_name": "abort"
+    },
+    {
+      "from": "n_0001",
+      "to": "n_0002",
+      "from_id": "n_0001",
+      "to_id": "n_0002",
+      "from_name": "transfer",
+      "to_name": "verify_transfer"
+    },
+    {
+      "from": "n_0001",
+      "to": "n_0009",
+      "from_id": "n_0001",
+      "to_id": "n_0009",
+      "from_name": "transfer",
+      "to_name": "retry"
+    },
+    {
+      "from": "n_0001",
+      "to": "n_0011",
+      "from_id": "n_0001",
+      "to_id": "n_0011",
+      "from_name": "transfer",
+      "to_name": "abort"
+    },
+    {
+      "from": "n_0002",
+      "to": "n_0000",
+      "from_id": "n_0002",
+      "to_id": "n_0000",
+      "from_name": "verify_transfer",
+      "to_name": "observe"
+    },
+    {
+      "from": "n_0002",
+      "to": "n_0009",
+      "from_id": "n_0002",
+      "to_id": "n_0009",
+      "from_name": "verify_transfer",
+      "to_name": "retry"
+    },
+    {
+      "from": "n_0002",
+      "to": "n_0011",
+      "from_id": "n_0002",
+      "to_id": "n_0011",
+      "from_name": "verify_transfer",
+      "to_name": "abort"
+    },
+    {
+      "from": "n_0003",
+      "to": "n_0004",
+      "from_id": "n_0003",
+      "to_id": "n_0004",
+      "from_name": "grasp",
+      "to_name": "verify_lift"
+    },
+    {
+      "from": "n_0003",
+      "to": "n_0007",
+      "from_id": "n_0003",
+      "to_id": "n_0007",
+      "from_name": "grasp",
+      "to_name": "belt"
+    },
+    {
+      "from": "n_0003",
+      "to": "n_0009",
+      "from_id": "n_0003",
+      "to_id": "n_0009",
+      "from_name": "grasp",
+      "to_name": "retry"
+    },
+    {
+      "from": "n_0003",
+      "to": "n_0011",
+      "from_id": "n_0003",
+      "to_id": "n_0011",
+      "from_name": "grasp",
+      "to_name": "abort"
+    },
+    {
+      "from": "n_0004",
+      "to": "n_0005",
+      "from_id": "n_0004",
+      "to_id": "n_0005",
+      "from_name": "verify_lift",
+      "to_name": "flip"
+    },
+    {
+      "from": "n_0004",
+      "to": "n_0009",
+      "from_id": "n_0004",
+      "to_id": "n_0009",
+      "from_name": "verify_lift",
+      "to_name": "retry"
+    },
+    {
+      "from": "n_0004",
+      "to": "n_0011",
+      "from_id": "n_0004",
+      "to_id": "n_0011",
+      "from_name": "verify_lift",
+      "to_name": "abort"
+    },
+    {
+      "from": "n_0005",
+      "to": "n_0006",
+      "from_id": "n_0005",
+      "to_id": "n_0006",
+      "from_name": "flip",
+      "to_name": "verify_flip"
+    },
+    {
+      "from": "n_0005",
+      "to": "n_0009",
+      "from_id": "n_0005",
+      "to_id": "n_0009",
+      "from_name": "flip",
+      "to_name": "retry"
+    },
+    {
+      "from": "n_0005",
+      "to": "n_0011",
+      "from_id": "n_0005",
+      "to_id": "n_0011",
+      "from_name": "flip",
+      "to_name": "abort"
+    },
+    {
+      "from": "n_0006",
+      "to": "n_0007",
+      "from_id": "n_0006",
+      "to_id": "n_0007",
+      "from_name": "verify_flip",
+      "to_name": "belt"
+    },
+    {
+      "from": "n_0006",
+      "to": "n_0009",
+      "from_id": "n_0006",
+      "to_id": "n_0009",
+      "from_name": "verify_flip",
+      "to_name": "retry"
+    },
+    {
+      "from": "n_0006",
+      "to": "n_0011",
+      "from_id": "n_0006",
+      "to_id": "n_0011",
+      "from_name": "verify_flip",
+      "to_name": "abort"
+    },
+    {
+      "from": "n_0007",
+      "to": "n_0008",
+      "from_id": "n_0007",
+      "to_id": "n_0008",
+      "from_name": "belt",
+      "to_name": "verify_belt"
+    },
+    {
+      "from": "n_0007",
+      "to": "n_0009",
+      "from_id": "n_0007",
+      "to_id": "n_0009",
+      "from_name": "belt",
+      "to_name": "retry"
+    },
+    {
+      "from": "n_0007",
+      "to": "n_0011",
+      "from_id": "n_0007",
+      "to_id": "n_0011",
+      "from_name": "belt",
+      "to_name": "abort"
+    },
+    {
+      "from": "n_0008",
+      "to": "n_0007",
+      "from_id": "n_0008",
+      "to_id": "n_0007",
+      "from_name": "verify_belt",
+      "to_name": "belt"
+    },
+    {
+      "from": "n_0008",
+      "to": "n_0010",
+      "from_id": "n_0008",
+      "to_id": "n_0010",
+      "from_name": "verify_belt",
+      "to_name": "done"
+    },
+    {
+      "from": "n_0008",
+      "to": "n_0009",
+      "from_id": "n_0008",
+      "to_id": "n_0009",
+      "from_name": "verify_belt",
+      "to_name": "retry"
+    },
+    {
+      "from": "n_0008",
+      "to": "n_0011",
+      "from_id": "n_0008",
+      "to_id": "n_0011",
+      "from_name": "verify_belt",
+      "to_name": "abort"
+    },
+    {
+      "from": "n_0009",
+      "to": "n_0000",
+      "from_id": "n_0009",
+      "to_id": "n_0000",
+      "from_name": "retry",
+      "to_name": "observe"
+    },
+    {
+      "from": "n_0009",
+      "to": "n_0011",
+      "from_id": "n_0009",
+      "to_id": "n_0011",
+      "from_name": "retry",
+      "to_name": "abort"
+    }
+  ],
+  "events": [
+    {
+      "seq": 0,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088062,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 1,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088143,
+      "node_id": "n_0001",
+      "node_name": "transfer",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 2,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.008818,
+      "node_id": "n_0002",
+      "node_name": "verify_transfer",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 3,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088208,
+      "node_id": "n_0003",
+      "node_name": "grasp",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 4,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088232,
+      "node_id": "n_0004",
+      "node_name": "verify_lift",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 5,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088255,
+      "node_id": "n_0005",
+      "node_name": "flip",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 6,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088277,
+      "node_id": "n_0006",
+      "node_name": "verify_flip",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 7,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.00883,
+      "node_id": "n_0007",
+      "node_name": "belt",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 8,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088327,
+      "node_id": "n_0008",
+      "node_name": "verify_belt",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 9,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088348,
+      "node_id": "n_0009",
+      "node_name": "retry",
+      "status": null,
+      "detail": {
+        "node_type": "tool"
+      }
+    },
+    {
+      "seq": 10,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088375,
+      "node_id": "n_0010",
+      "node_name": "done",
+      "status": null,
+      "detail": {
+        "node_type": "end"
+      }
+    },
+    {
+      "seq": 11,
+      "event_type": "node_registered",
+      "timestamp": 1794320586.0088394,
+      "node_id": "n_0011",
+      "node_name": "abort",
+      "status": null,
+      "detail": {
+        "node_type": "end"
+      }
+    },
+    {
+      "seq": 12,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088449,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": null,
+      "detail": {
+        "from_name": "observe",
+        "to_name": "transfer",
+        "to_id": "n_0001"
+      }
+    },
+    {
+      "seq": 13,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088468,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": null,
+      "detail": {
+        "from_name": "observe",
+        "to_name": "grasp",
+        "to_id": "n_0003"
+      }
+    },
+    {
+      "seq": 14,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088484,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": null,
+      "detail": {
+        "from_name": "observe",
+        "to_name": "belt",
+        "to_id": "n_0007"
+      }
+    },
+    {
+      "seq": 15,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088496,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": null,
+      "detail": {
+        "from_name": "observe",
+        "to_name": "retry",
+        "to_id": "n_0009"
+      }
+    },
+    {
+      "seq": 16,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088513,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": null,
+      "detail": {
+        "from_name": "observe",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 17,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.008853,
+      "node_id": "n_0001",
+      "node_name": "transfer",
+      "status": null,
+      "detail": {
+        "from_name": "transfer",
+        "to_name": "verify_transfer",
+        "to_id": "n_0002"
+      }
+    },
+    {
+      "seq": 18,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.008854,
+      "node_id": "n_0001",
+      "node_name": "transfer",
+      "status": null,
+      "detail": {
+        "from_name": "transfer",
+        "to_name": "retry",
+        "to_id": "n_0009"
+      }
+    },
+    {
+      "seq": 19,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.008855,
+      "node_id": "n_0001",
+      "node_name": "transfer",
+      "status": null,
+      "detail": {
+        "from_name": "transfer",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 20,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088563,
+      "node_id": "n_0002",
+      "node_name": "verify_transfer",
+      "status": null,
+      "detail": {
+        "from_name": "verify_transfer",
+        "to_name": "observe",
+        "to_id": "n_0000"
+      }
+    },
+    {
+      "seq": 21,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088573,
+      "node_id": "n_0002",
+      "node_name": "verify_transfer",
+      "status": null,
+      "detail": {
+        "from_name": "verify_transfer",
+        "to_name": "retry",
+        "to_id": "n_0009"
+      }
+    },
+    {
+      "seq": 22,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088584,
+      "node_id": "n_0002",
+      "node_name": "verify_transfer",
+      "status": null,
+      "detail": {
+        "from_name": "verify_transfer",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 23,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088596,
+      "node_id": "n_0003",
+      "node_name": "grasp",
+      "status": null,
+      "detail": {
+        "from_name": "grasp",
+        "to_name": "verify_lift",
+        "to_id": "n_0004"
+      }
+    },
+    {
+      "seq": 24,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088603,
+      "node_id": "n_0003",
+      "node_name": "grasp",
+      "status": null,
+      "detail": {
+        "from_name": "grasp",
+        "to_name": "belt",
+        "to_id": "n_0007"
+      }
+    },
+    {
+      "seq": 25,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088618,
+      "node_id": "n_0003",
+      "node_name": "grasp",
+      "status": null,
+      "detail": {
+        "from_name": "grasp",
+        "to_name": "retry",
+        "to_id": "n_0009"
+      }
+    },
+    {
+      "seq": 26,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088627,
+      "node_id": "n_0003",
+      "node_name": "grasp",
+      "status": null,
+      "detail": {
+        "from_name": "grasp",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 27,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.008864,
+      "node_id": "n_0004",
+      "node_name": "verify_lift",
+      "status": null,
+      "detail": {
+        "from_name": "verify_lift",
+        "to_name": "flip",
+        "to_id": "n_0005"
+      }
+    },
+    {
+      "seq": 28,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.008865,
+      "node_id": "n_0004",
+      "node_name": "verify_lift",
+      "status": null,
+      "detail": {
+        "from_name": "verify_lift",
+        "to_name": "retry",
+        "to_id": "n_0009"
+      }
+    },
+    {
+      "seq": 29,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088663,
+      "node_id": "n_0004",
+      "node_name": "verify_lift",
+      "status": null,
+      "detail": {
+        "from_name": "verify_lift",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 30,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088673,
+      "node_id": "n_0005",
+      "node_name": "flip",
+      "status": null,
+      "detail": {
+        "from_name": "flip",
+        "to_name": "verify_flip",
+        "to_id": "n_0006"
+      }
+    },
+    {
+      "seq": 31,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088687,
+      "node_id": "n_0005",
+      "node_name": "flip",
+      "status": null,
+      "detail": {
+        "from_name": "flip",
+        "to_name": "retry",
+        "to_id": "n_0009"
+      }
+    },
+    {
+      "seq": 32,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088694,
+      "node_id": "n_0005",
+      "node_name": "flip",
+      "status": null,
+      "detail": {
+        "from_name": "flip",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 33,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.008871,
+      "node_id": "n_0006",
+      "node_name": "verify_flip",
+      "status": null,
+      "detail": {
+        "from_name": "verify_flip",
+        "to_name": "belt",
+        "to_id": "n_0007"
+      }
+    },
+    {
+      "seq": 34,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088725,
+      "node_id": "n_0006",
+      "node_name": "verify_flip",
+      "status": null,
+      "detail": {
+        "from_name": "verify_flip",
+        "to_name": "retry",
+        "to_id": "n_0009"
+      }
+    },
+    {
+      "seq": 35,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088735,
+      "node_id": "n_0006",
+      "node_name": "verify_flip",
+      "status": null,
+      "detail": {
+        "from_name": "verify_flip",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 36,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.008875,
+      "node_id": "n_0007",
+      "node_name": "belt",
+      "status": null,
+      "detail": {
+        "from_name": "belt",
+        "to_name": "verify_belt",
+        "to_id": "n_0008"
+      }
+    },
+    {
+      "seq": 37,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.008876,
+      "node_id": "n_0007",
+      "node_name": "belt",
+      "status": null,
+      "detail": {
+        "from_name": "belt",
+        "to_name": "retry",
+        "to_id": "n_0009"
+      }
+    },
+    {
+      "seq": 38,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.008877,
+      "node_id": "n_0007",
+      "node_name": "belt",
+      "status": null,
+      "detail": {
+        "from_name": "belt",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 39,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088787,
+      "node_id": "n_0008",
+      "node_name": "verify_belt",
+      "status": null,
+      "detail": {
+        "from_name": "verify_belt",
+        "to_name": "belt",
+        "to_id": "n_0007"
+      }
+    },
+    {
+      "seq": 40,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088797,
+      "node_id": "n_0008",
+      "node_name": "verify_belt",
+      "status": null,
+      "detail": {
+        "from_name": "verify_belt",
+        "to_name": "done",
+        "to_id": "n_0010"
+      }
+    },
+    {
+      "seq": 41,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088809,
+      "node_id": "n_0008",
+      "node_name": "verify_belt",
+      "status": null,
+      "detail": {
+        "from_name": "verify_belt",
+        "to_name": "retry",
+        "to_id": "n_0009"
+      }
+    },
+    {
+      "seq": 42,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088818,
+      "node_id": "n_0008",
+      "node_name": "verify_belt",
+      "status": null,
+      "detail": {
+        "from_name": "verify_belt",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 43,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088832,
+      "node_id": "n_0009",
+      "node_name": "retry",
+      "status": null,
+      "detail": {
+        "from_name": "retry",
+        "to_name": "observe",
+        "to_id": "n_0000"
+      }
+    },
+    {
+      "seq": 44,
+      "event_type": "edge_registered",
+      "timestamp": 1794320586.0088844,
+      "node_id": "n_0009",
+      "node_name": "retry",
+      "status": null,
+      "detail": {
+        "from_name": "retry",
+        "to_name": "abort",
+        "to_id": "n_0011"
+      }
+    },
+    {
+      "seq": 45,
+      "event_type": "node_started",
+      "timestamp": 1794320586.0093026,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": "running",
+      "detail": {}
+    },
+    {
+      "seq": 46,
+      "event_type": "inputs_recorded",
+      "timestamp": 1794320586.0098577,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": null,
+      "detail": {
+        "asset_count": 0,
+        "keys": [
+          "stage"
+        ]
+      }
+    },
+    {
+      "seq": 47,
+      "event_type": "output_recorded",
+      "timestamp": 1794320586.0108128,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": null,
+      "detail": {
+        "asset_count": 0
+      }
+    },
+    {
+      "seq": 48,
+      "event_type": "node_finished",
+      "timestamp": 1794320586.0108209,
+      "node_id": "n_0000",
+      "node_name": "observe",
+      "status": "ok",
+      "detail": {
+        "success": true,
+        "duration_ms": 1.52
+      }
+    },
+    {
+      "seq": 49,
+      "event_type": "node_started",
+      "timestamp": 1794320586.011383,
+      "node_id": "n_0009",
+      "node_name": "retry",
+      "status": "running",
+      "detail": {}
+    },
+    {
+      "seq": 50,
+      "event_type": "inputs_recorded",
+      "timestamp": 1794320586.0116885,
+      "node_id": "n_0009",
+      "node_name": "retry",
+      "status": null,
+      "detail": {
+        "asset_count": 0,
+        "keys": [
+          "stage"
+        ]
+      }
+    },
+    {
+      "seq": 51,
+      "event_type": "output_recorded",
+      "timestamp": 1794320586.012016,
+      "node_id": "n_0009",
+      "node_name": "retry",
+      "status": null,
+      "detail": {
+        "asset_count": 0
+      }
+    },
+    {
+      "seq": 52,
+      "event_type": "node_finished",
+      "timestamp": 1794320586.0120246,
+      "node_id": "n_0009",
+      "node_name": "retry",
+      "status": "ok",
+      "detail": {
+        "success": true,
+        "duration_ms": 0.64
+      }
+    }
+  ]
+}

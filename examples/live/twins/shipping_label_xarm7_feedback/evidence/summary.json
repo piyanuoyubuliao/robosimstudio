@@ -1,0 +1,199 @@
+{
+  "kind": "completed_physical_episodes",
+  "sources": [
+    "run/acceptance.json",
+    "run/acceptance_boundary.json",
+    "run/acceptance_retest.json"
+  ],
+  "source_hashes_verified": true,
+  "episodes": 10,
+  "successes": 7,
+  "stages": {
+    "right_handoff": {
+      "entered": 8,
+      "completed": 6
+    },
+    "grasp_and_lift": {
+      "entered": 5,
+      "completed": 5
+    },
+    "flip_and_face": {
+      "entered": 5,
+      "completed": 5
+    },
+    "push_and_stable_belt": {
+      "entered": 7,
+      "completed": 7
+    }
+  },
+  "failures": {
+    "unreachable": 2,
+    "outside_workspace_y": 1
+  },
+  "cases": [
+    {
+      "name": "yaw_-15_back",
+      "center": [
+        0.09008630770764484,
+        0.0827906261952988
+      ],
+      "yaw": -15.0,
+      "face_up": false,
+      "success": true,
+      "failure": null,
+      "failure_stage": null,
+      "retries": {},
+      "sim_seconds": 91.8833333333294,
+      "face_up_final": 0.9999999999565172,
+      "belt_coverage_final": 1.0
+    },
+    {
+      "name": "yaw_15_back",
+      "center": [
+        0.09662908258908082,
+        0.125042168629631
+      ],
+      "yaw": 15.0,
+      "face_up": false,
+      "success": false,
+      "failure": "unreachable",
+      "failure_stage": "transfer",
+      "retries": {
+        "transfer": 2
+      },
+      "sim_seconds": 48.61666666666519,
+      "face_up_final": null,
+      "belt_coverage_final": null
+    },
+    {
+      "name": "yaw_-15_front",
+      "center": [
+        0.09101891881269276,
+        0.11721747141933668
+      ],
+      "yaw": -15.0,
+      "face_up": true,
+      "success": false,
+      "failure": "unreachable",
+      "failure_stage": "transfer",
+      "retries": {
+        "transfer": 2
+      },
+      "sim_seconds": 49.48333333333181,
+      "face_up_final": null,
+      "belt_coverage_final": null
+    },
+    {
+      "name": "yaw_15_front",
+      "center": [
+        0.1105720553231049,
+        0.09322196841878108
+      ],
+      "yaw": 15.0,
+      "face_up": true,
+      "success": true,
+      "failure": null,
+      "failure_stage": null,
+      "retries": {},
+      "sim_seconds": 63.86666666666432,
+      "face_up_final": 0.9999999999558916,
+      "belt_coverage_final": 1.0
+    },
+    {
+      "name": "reference_back",
+      "center": [
+        0.08,
+        0.1
+      ],
+      "yaw": 0.0,
+      "face_up": false,
+      "success": true,
+      "failure": null,
+      "failure_stage": null,
+      "retries": {},
+      "sim_seconds": 81.19999999999668,
+      "face_up_final": 0.9999999999571235,
+      "belt_coverage_final": 1.0
+    },
+    {
+      "name": "reference_front",
+      "center": [
+        0.08,
+        0.1
+      ],
+      "yaw": 0.0,
+      "face_up": true,
+      "success": true,
+      "failure": null,
+      "failure_stage": null,
+      "retries": {},
+      "sim_seconds": 53.533333333331576,
+      "face_up_final": 0.9999999999510933,
+      "belt_coverage_final": 1.0
+    },
+    {
+      "name": "yaw_-30_back",
+      "center": [
+        0.09463233054554271,
+        0.08499091392007632
+      ],
+      "yaw": -30.0,
+      "face_up": false,
+      "success": true,
+      "failure": null,
+      "failure_stage": null,
+      "retries": {},
+      "sim_seconds": 91.66666666666275,
+      "face_up_final": 0.9999999999569285,
+      "belt_coverage_final": 1.0
+    },
+    {
+      "name": "left_edge",
+      "center": [
+        -0.1,
+        0.08
+      ],
+      "yaw": -10,
+      "face_up": false,
+      "success": true,
+      "failure": null,
+      "failure_stage": null,
+      "retries": {},
+      "sim_seconds": 57.2666666666647,
+      "face_up_final": 0.9999999999549917,
+      "belt_coverage_final": 1.0
+    },
+    {
+      "name": "workspace_reject",
+      "center": [
+        0.1,
+        0.28
+      ],
+      "yaw": 0,
+      "face_up": false,
+      "success": false,
+      "failure": "outside_workspace_y",
+      "failure_stage": "observe",
+      "retries": {},
+      "sim_seconds": 0.0,
+      "face_up_final": null,
+      "belt_coverage_final": null
+    },
+    {
+      "name": "yaw_30_back",
+      "center": [
+        0.061661169233094865,
+        0.09966056618554414
+      ],
+      "yaw": 30.0,
+      "face_up": false,
+      "success": true,
+      "failure": null,
+      "failure_stage": null,
+      "retries": {},
+      "sim_seconds": 83.74999999999653,
+      "face_up_final": 0.999999999956794,
+      "belt_coverage_final": 1.0
+    }
+  ]
+}

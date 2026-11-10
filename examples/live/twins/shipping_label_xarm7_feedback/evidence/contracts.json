@@ -1,0 +1,31 @@
+{
+  "passed": 25,
+  "checks": [
+    "observe_yaw_-179_front_False",
+    "observe_yaw_-179_front_True",
+    "observe_yaw_-91_front_False",
+    "observe_yaw_-91_front_True",
+    "observe_yaw_-45_front_False",
+    "observe_yaw_-45_front_True",
+    "observe_yaw_-15_front_False",
+    "observe_yaw_-15_front_True",
+    "observe_yaw_0_front_False",
+    "observe_yaw_0_front_True",
+    "observe_yaw_15_front_False",
+    "observe_yaw_15_front_True",
+    "observe_yaw_45_front_False",
+    "observe_yaw_45_front_True",
+    "observe_yaw_89_front_False",
+    "observe_yaw_89_front_True",
+    "observe_yaw_179_front_False",
+    "observe_yaw_179_front_True",
+    "top_first",
+    "reject_nonfinite",
+    "reject_stale_camera",
+    "front_skip",
+    "back_flip",
+    "empty_retry",
+    "collision_abort"
+  ],
+  "kind": "synthetic_geometry_and_real_GaP_routing_only"
+}

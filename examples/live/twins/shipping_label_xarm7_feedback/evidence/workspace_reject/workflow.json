@@ -1,0 +1,179 @@
+{
+  "version": 3,
+  "meta": {
+    "name": "shipping_label_xarm7_feedback",
+    "description": "Single flat parcel: observe, transfer, long-edge pinch, verify lift, flip, verify face, push and verify belt; bounded recovery."
+  },
+  "nodes": {
+    "observe": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "observe"
+      }
+    },
+    "transfer": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "transfer"
+      }
+    },
+    "verify_transfer": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "verify_transfer"
+      }
+    },
+    "grasp": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "grasp"
+      }
+    },
+    "verify_lift": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "verify_lift"
+      }
+    },
+    "flip": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "flip"
+      }
+    },
+    "verify_flip": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "verify_flip"
+      }
+    },
+    "belt": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "belt"
+      }
+    },
+    "verify_belt": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "verify_belt"
+      }
+    },
+    "retry": {
+      "type": "tool",
+      "tool": "parcel.node",
+      "inputs": {
+        "stage": "retry"
+      }
+    },
+    "done": {
+      "type": "end",
+      "status": "success"
+    },
+    "abort": {
+      "type": "end",
+      "status": "failure"
+    }
+  },
+  "edges": [
+    [
+      "START",
+      "observe"
+    ]
+  ],
+  "conditional_edges": {
+    "observe": {
+      "router_field": "status",
+      "mapping": {
+        "transfer": "transfer",
+        "grasp": "grasp",
+        "belt": "belt",
+        "retry": "retry",
+        "abort": "abort"
+      }
+    },
+    "transfer": {
+      "router_field": "status",
+      "mapping": {
+        "check": "verify_transfer",
+        "retry": "retry",
+        "abort": "abort"
+      }
+    },
+    "verify_transfer": {
+      "router_field": "status",
+      "mapping": {
+        "observe": "observe",
+        "retry": "retry",
+        "abort": "abort"
+      }
+    },
+    "grasp": {
+      "router_field": "status",
+      "mapping": {
+        "check": "verify_lift",
+        "skip": "belt",
+        "retry": "retry",
+        "abort": "abort"
+      }
+    },
+    "verify_lift": {
+      "router_field": "status",
+      "mapping": {
+        "flip": "flip",
+        "retry": "retry",
+        "abort": "abort"
+      }
+    },
+    "flip": {
+      "router_field": "status",
+      "mapping": {
+        "check": "verify_flip",
+        "retry": "retry",
+        "abort": "abort"
+      }
+    },
+    "verify_flip": {
+      "router_field": "status",
+      "mapping": {
+        "belt": "belt",
+        "retry": "retry",
+        "abort": "abort"
+      }
+    },
+    "belt": {
+      "router_field": "status",
+      "mapping": {
+        "check": "verify_belt",
+        "retry": "retry",
+        "abort": "abort"
+      }
+    },
+    "verify_belt": {
+      "router_field": "status",
+      "mapping": {
+        "continue": "belt",
+        "success": "done",
+        "retry": "retry",
+        "abort": "abort"
+      }
+    },
+    "retry": {
+      "router_field": "status",
+      "mapping": {
+        "observe": "observe",
+        "abort": "abort"
+      }
+    }
+  },
+  "subgraphs": {}
+}

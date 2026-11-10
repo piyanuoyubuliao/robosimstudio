@@ -1,0 +1,15 @@
+{
+  "kind": "policy_methods_with_stub_robot_no_physics",
+  "passed": 9,
+  "checks": [
+    "no_contact",
+    "empty_grasp",
+    "wrong_face",
+    "grasp_callable_after_failed_attempt",
+    "slip_material_patch",
+    "retry_budget_not_reset",
+    "terminal_deformation",
+    "actual_grasp_skip",
+    "node_budget"
+  ]
+}

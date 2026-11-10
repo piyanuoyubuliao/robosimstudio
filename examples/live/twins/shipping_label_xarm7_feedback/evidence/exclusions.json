@@ -1,0 +1,20 @@
+[
+  {
+    "case": "yaw_30_back",
+    "excluded": true,
+    "reason": "User confirmed interference; live Reset interrupted the flip before a final outcome.",
+    "replacement": "acceptance_retest.json"
+  },
+  {
+    "case": "left_edge",
+    "excluded": true,
+    "reason": "User confirmed interference; live Reset interrupted the boundary episode before a final outcome.",
+    "replacement": "acceptance_boundary.json"
+  },
+  {
+    "case": "interactive_page_run",
+    "excluded": true,
+    "reason": "User confirmed two parcel drag handles stretched the parcel. All success/failure and recovery statistics excluded.",
+    "artifact": "interactive_failure.json"
+  }
+]
